@@ -17,7 +17,7 @@ const OfferBanner = () => {
       {data && offerBanner && offerBanner.length > 0 ? (
         <div className=' pt-10 flex flex-col sm:flex-row '>
           {offerBanner.map((item, index) => (
-            <div key={index} className='w-full mx-0 sm:mx-2 sm:mt-5 '>
+            <div key={index} className='w-full mx-0 sm:mx-2 sm:mt-5  mb-5 sm:mb-0'>
               <Link to={`c/${item.bannerRef}`}>
               <img className='w-full' src={item.bannerUrl.url} alt={item.bannerAlt} />
               </Link>

@@ -16,12 +16,15 @@ const SmallBanner = () => {
     <div className=' max-w-7xl px-3  mx-auto flex flex-col sm:flex-row  mt-2 sm:mt-0 mb-2 sm:mb-0  '>
       {data && smallBanner && smallBanner.length > 0 ? (
         smallBanner.map((item, index) => (
-          <div className='w-full sm:mx-2 sm:mt-5 mb-2 sm:mb-0 mt-2 sm:mt-0' key={index}>
+          <div
+            className='w-full sm:mx-2 sm:mt-5 mb-2 sm:mb-0 mt-2 '
+            key={index}
+          >
             <Link to={`c/${item.bannerRef}`}>
               <img className='w-full' src={item.bannerUrl.url} />
             </Link>
           </div>
-        ))
+        ))  
       ) : (
         <>...loading</>
       )}
