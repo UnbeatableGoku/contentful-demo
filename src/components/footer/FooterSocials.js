@@ -16,37 +16,37 @@ const FooterSocials = ({ props }) => {
   return (
     <>
       <div className='flex flex-col sm:flex-row items-start sm:items-center '>
-        <div className='mx-3 sm:mx-0  mt-5  pt-5 sm:pt-0 sm:mt-3 pb-3 sm:pb-0 text-xl sm:text-base'>
+        <div className='mx-3 sm:mx-0  mt-5  pt-5 sm:pt-0 sm:mt-3 pb-2 sm:pb-0 text-xl sm:text-base font-bold'>
           FOLLOW US ON
         </div>
-        <div className=' mx-3 sm:mx-4'>
+        <div className=' mx-2 sm:mx-4'>
           <div className='flex items-center justify-between '>
-            <div className='mx-0 sm:mx-1'>
+            <div className='mx-1 sm:mx-1'>
               {facebookObj && facebookObj.url && <FacebookSvg />}
             </div>
-            <div className='mx-0 sm:mx-1'>
+            <div className='mx-1 sm:mx-1'>
               {twitterObj && twitterObj.url && <TwitterSvg />}
             </div>
-            <div className='mx-0 sm:mx-1'>
+            <div className='mx-1 sm:mx-1'>
               {youtubeObj && youtubeObj.url && <YoutubeSvg />}
             </div>
-            <div className='mx-0 sm:mx-1'>
+            <div className='mx-1 sm:mx-1'>
               {instagramObj && instagramObj.url && <InstagramSvg />}
             </div>
             {pintrestObj && pintrestObj.url && (
-              <div className='mx-0 sm:mx-1'>
+              <div className='mx-1 sm:mx-1'>
                 <PintrestSvg />
               </div>
             )}
           </div>
         </div>
       </div>
-      <div className='flex flex-col sm:flex-row items-start sm:items-center'>
-        <div className='mt-5 sm:mt-3 pb-3 sm:pb-0 text-xl sm:text-base ms-3 sm:ms-0'>
+      <div className='flex flex-col sm:flex-row items-start sm:items-center font-bold'>
+        <div className='mt-5 sm:mt-3  sm:pb-0 text-xl sm:text-base ms-3 sm:ms-0'>
           PAYMENT METHOD
         </div>
         <div className='flex mx-3 sm:mx-4'>
-          <div className='mx-0 sm:mx-1'>
+          <div className='mx-1 sm:mx-1'>
             <svg
               width='70px'
               height='70px'
@@ -92,7 +92,7 @@ const FooterSocials = ({ props }) => {
               </g>
             </svg>
           </div>
-          <div className='mx-0 sm:mx-1'>
+          <div className='mx-1 sm:mx-1'>
             <svg
               width='70px'
               height='70px'
@@ -156,7 +156,7 @@ const FooterSocials = ({ props }) => {
               </g>
             </svg>
           </div>
-          <div className='mx-0 sm:mx-1'>
+          <div className='mx-1 sm:mx-1'>
             <svg
               width='70px'
               height='70px'
@@ -190,7 +190,7 @@ const FooterSocials = ({ props }) => {
               </g>
             </svg>
           </div>
-          <div className='mx-0 sm:mx-1'>
+          <div className='mx-1 sm:mx-1'>
             <svg
               width='7s0px'
               height='70px'

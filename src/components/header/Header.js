@@ -16,7 +16,7 @@ const Header = () => {
     <div>
       <div>
         {newData && navbarData && navbarData.length > 0 ? (
-          <ul className='flex bg-black text-gray-50  items-center justify-center  relative   hover:cursor-pointer '>
+          <ul className='flex flex-wrap bg-black text-gray-50  items-center justify-center  relative   hover:cursor-pointer mx-auto px-3 max-w-7xl'>
             {navbarData.map((item, index) => (
               <HeaderList props={item} key={index} />
             ))}

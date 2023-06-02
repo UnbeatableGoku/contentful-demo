@@ -10,7 +10,7 @@ const HeaderList = ({ props }) => {
       onMouseOver={() => setShowMegaMenu(true)}
       onMouseOut={() => setShowMegaMenu(false)}
     >
-      <div className='flex items-center p-4 '>
+      <div className='flex items-center p-2 sm:p-4 '>
         <span className='uppercase'>{props.title}</span>
         <svg
           className='ms-3 '
