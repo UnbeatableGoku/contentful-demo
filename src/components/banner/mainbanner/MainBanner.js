@@ -4,6 +4,7 @@ import 'swiper/css';
 import 'swiper/css/pagination';
 import { Pagination } from 'swiper';
 import useMainBanner from '../../../hooks/useMainBanner';
+import { Link } from 'react-router-dom';
 
 const MainBanner = () => {
   const { data } = useMainBanner();
@@ -14,15 +15,16 @@ const MainBanner = () => {
       setMainBanner(data.bannerCollection.items);
     }
   }, [data]);
-
   return (
-    <div className=''>
+    <div className='mx-auto px-3 max-w-7xl '>
       <Swiper pagination={true} modules={[Pagination]}>
         {data && mainBanner && mainBanner.length > 0 ? (
-          mainBanner.map((item,index) => (
+          mainBanner.map((item, index) => (
             <SwiperSlide key={index}>
               <div>
-                <img src={item.bannerUrl.url} />
+                <Link to={`c/${item.bannerRef}`}>
+                  <img src={item.bannerUrl.url} />
+                </Link>
               </div>
             </SwiperSlide>
           ))

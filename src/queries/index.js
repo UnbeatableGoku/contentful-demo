@@ -152,6 +152,33 @@ const FOOTER_TWO = gql`
         url
       }
     }
+    footerLevel2DownloadsCollection(order: sys_publishedAt_ASC) {
+      items {
+        title
+        url
+      }
+    }
+  }
+`;
+
+const FOOTER_THREE = gql`
+  query {
+    footerLevel3CopyrightsCollection {
+      items {
+        copyright
+      }
+    }
+  }
+`;
+
+const FOOTER_ONE = gql`
+  query newsletter {
+    footerLevel1NewsletterCollection {
+      items {
+        title
+        description
+      }
+    }
   }
 `;
 export {
@@ -162,4 +189,6 @@ export {
   OFFER_BANNER,
   FEATURED_PRODUCTS,
   FOOTER_TWO,
+  FOOTER_THREE,
+  FOOTER_ONE,
 };

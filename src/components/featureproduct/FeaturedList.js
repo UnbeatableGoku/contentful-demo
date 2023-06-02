@@ -5,8 +5,8 @@ const FeaturedList = ({ props }) => {
   const img = props && props.productImage.url;
   const alt = props && props.productImage.title;
   return (
-    <div className='mx-1 w-52 relative group cursor-pointer '>
-      <div className='absolute right-4 top-3 bg-gray-100  rounded-full p-1 '>
+    <div className='mx-auto sm:mx-1  w-full  relative group cursor-pointer '>
+      <div className='absolute right-7 sm:right-4 top-3 bg-gray-100  rounded-full p-1 '>
         <svg
           width='25px'
           className='hover:fill-black'
@@ -24,13 +24,16 @@ const FeaturedList = ({ props }) => {
           />
         </svg>
       </div>
-      <div className='border px-5  group-hover:bg-[#0000001a] transition-all duration-500'>
-        <img src={img} alt={alt} />
+      <div className='border px-5  w-full group-hover:bg-[#0000001a] transition-all duration-500'>
+        <div className='mx-auto  max-w-[200px]'>
+          <img src={img} alt={alt} />
+        </div>
       </div>
+
       <div className='text-left h-10 mt-2'>{title}</div>
       <div className='text-left mt-2'>${price}</div>
 
-      <button className='group/bag absolute bottom-28 right-4 w-12 h-12 border-2 rounded  border-gray-950 hidden bg-black hover:bg-white  hover:stroke-black group-hover:block    transition-all duration-500  '>
+      <button className='group/bag absolute bottom-28 right-7 w-12 h-12 border-2 rounded  border-gray-950 hidden bg-black hover:bg-white  hover:stroke-black group-hover:block    transition-all duration-500  '>
         <svg
           fill='#000000'
           height='19px'

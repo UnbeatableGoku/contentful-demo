@@ -6,11 +6,11 @@ const FooterLogo = ({ props }) => {
   const details = props && props.logoDetails;
 
   return (
-    <div className='flex flex-col  '>
-      <div>
+    <div className='flex flex-col ps-5 sm:ps-5  '>
+      <div className='pt-10 sm:pt-0'>
         <img src={img} alt={title} />
       </div>
-      <div className='text-left pt-5 text-gray-400'>
+      <div className='text-left pt-5 text-gray-400 pb-5 sm:pb-5'>
         <p>{details}</p>
       </div>
     </div>

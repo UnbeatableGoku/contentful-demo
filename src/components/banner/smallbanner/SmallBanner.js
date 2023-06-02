@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
 import useSmallBanner from '../../../hooks/useSmallBanner';
 
 const SmallBanner = () => {
@@ -12,11 +13,13 @@ const SmallBanner = () => {
   }, [data]);
 
   return (
-    <div className=' mx-auto flex  '>
+    <div className=' max-w-7xl px-3  mx-auto flex flex-col sm:flex-row  '>
       {data && smallBanner && smallBanner.length > 0 ? (
         smallBanner.map((item, index) => (
-          <div className='mx-2 mt-5' key={index}>
-            <img src={item.bannerUrl.url} />
+          <div className='w-full sm:mx-2 sm:mt-5' key={index}>
+            <Link to={`c/${item.bannerRef}`}>
+              <img className='w-full' src={item.bannerUrl.url} />
+            </Link>
           </div>
         ))
       ) : (

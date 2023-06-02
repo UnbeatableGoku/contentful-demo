@@ -18,26 +18,41 @@ const FeatureProduct = () => {
   }, [data]);
   return (
     <>
-      <div className='py-10 text-3xl'>Features Products</div>
+      <div className='mx-auto px-3 max-w-7xl pb-8'>
+        <div className='py-5  sm:py-10 text-3xl'>Features Products</div>
 
-      <div className='flex'>
-        {data && featuredProducts && featuredProducts.length > 0 ? (
-          <Swiper
-            pagination={true}
-            modules={[Navigation]}
-            slidesPerView={6}
-            className=''
-            navigation={true}
-          >
-            {featuredProducts.map((item, index) => (
-              <SwiperSlide key={index}>
-                <FeaturedList props={item} />
-              </SwiperSlide>
-            ))}
-          </Swiper>
-        ) : (
-          <>...Loading</>
-        )}
+        <div className=''>
+          {data && featuredProducts && featuredProducts.length > 0 ? (
+            <Swiper
+              slidesPerView={1}
+              spaceBetween={30}
+              navigation
+              modules={[Navigation]}
+              breakpoints={{
+                540: {
+                  slidesPerView: 2,
+                },
+                767: {
+                  slidesPerView: 3,
+                },
+                1024: {
+                  slidesPerView: 5,
+                },
+                1244: {
+                  slidesPerView: 6,
+                },
+              }}
+            >
+              {featuredProducts.map((item, index) => (
+                <SwiperSlide key={index}>
+                  <FeaturedList props={item} />
+                </SwiperSlide>
+              ))}
+            </Swiper>
+          ) : (
+            <>...Loading</>
+          )}
+        </div>
       </div>
     </>
   );
